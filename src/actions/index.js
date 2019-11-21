@@ -18,7 +18,7 @@ export const removeItem = (feature) => {
     }
 }
 
-export const TOTAL = (total) => {
+export const total = (total) => {
     return {
         type: TOTAL,
         payload: total
