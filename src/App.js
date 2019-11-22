@@ -2,7 +2,7 @@ import React from 'react';
 //7. import connect then create a mapStateToProps function
 import {connect} from 'react-redux';
 
-import {addItem, removeItem, total} from './actions';
+import {addItem, removeFeature, total} from './actions';
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
@@ -30,7 +30,7 @@ const App = (props) => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
-    props.removeItem(item);
+    props.removeFeature(item);
     props.total(-item.price);
   };
 
@@ -62,4 +62,4 @@ function mapStateToProps(state){
     additionalPrice: state.additionalPrice
   };
 }
-export default connect(mapStateToProps, {addItem, removeItem, total})(App);
+export default connect(mapStateToProps, {addItem, removeFeature, total})(App);

@@ -11,7 +11,7 @@ export const addItem = (feature) =>{
     }
 }
 
-export const removeItem = (feature) => {
+export const removeFeature = (feature) => {
     return {
         type: REMOVE,
         payload: feature
