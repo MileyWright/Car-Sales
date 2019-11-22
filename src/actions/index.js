@@ -2,7 +2,6 @@
 
 export const ADD = 'ADD';
 export const REMOVE = 'REMOVE';
-export const TOTAL = 'TOTAL';
 
 export const addItem = (feature) =>{
     return {
@@ -15,12 +14,5 @@ export const removeFeature = (feature) => {
     return {
         type: REMOVE,
         payload: feature
-    }
-}
-
-export const total = (total) => {
-    return {
-        type: TOTAL,
-        payload: total
     }
 }

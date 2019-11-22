@@ -31,13 +31,13 @@ const App = (props) => {
   const removeFeature = item => {
     // dispatch an action here to remove an item
     props.removeFeature(item);
-    props.total(-item.price);
+  
   };
 
   const buyItem = item => {
     // dipsatch an action here to add an item
     props.addItem(item);
-    props.total(item.price)
+
   };
 
   return (
@@ -62,4 +62,4 @@ function mapStateToProps(state){
     additionalPrice: state.additionalPrice
   };
 }
-export default connect(mapStateToProps, {addItem, removeFeature, total})(App);
+export default connect(mapStateToProps, {addItem, removeFeature})(App);
